@@ -7,7 +7,7 @@ export function createMarkup(hits) {
     .map(hit => {
       return `<div class="photo-card">
       <a href ="${hit.webformatURL}">
-      <img src="${hit.webformatURL}" alt="${hit.tags}" loading="lazy" />
+      <img src="${hit.webformatURL}" alt="${hit.tags}" loading="lazy"/>
       <div class="info">
         <p class="info-item">
           <b>Likes:</b>${hit.likes}
@@ -28,4 +28,8 @@ export function createMarkup(hits) {
   divgal.insertAdjacentHTML('beforeend', markup);
 }
 
-export const lightbox = new SimpleLightbox(`.photo-card a`, {});
+export const lightbox = new SimpleLightbox(`.photo-card a`, {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});

@@ -107,3 +107,7 @@ button.hidden {
 .photo-card .info-item b {
   font-weight: bold;
 }
+.sl-image img {
+  width: 1000;
+  height: 800;
+}
